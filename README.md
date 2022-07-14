@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# Project 4 - OfficeTalk
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# OfficeTalk (O.T.)
 
-## Available Scripts
+# App Description
+OfficeTalk is a messaging/chat application in which users can see others users online, and engage in real time online conversation with them! Users will be able to converse with any other user on their server, and send public messages to other users on the server as well. This makes it great for workflow & office conversation without having to go see your colleagues in person!
 
-In the project directory, you can run:
+# Technologies Used
+I wanted to use websockets for this project, since it came up in discussion during the last project for implementing direct messaging to our social media app. Usually chat applications require polling the server for changes, keeping track of timestamps, and a myriad of other processes and in the past this has been very inefficient and slower than it should be. However, Websockets intrigued me for implementing a real-time chat system since it provides bi-directional communication between the client and server. Socket.io enables low-latency and event-based communication between client and server. This means that the server pushes messages to the client, and the server does not need to continuously check if a message has been sent.
 
-### `npm start`
+## Client Side:
+* React.js
+* Websockets.io
+* Tailwind
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Server Side:
+* Express
+* Node.js
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# User Stories:
+* As a user, i want to access a public chat room
+* As a user, i want to be able to send announcements/messages to the public chat room.
+* As a user, i want to see other users online that i can chat with.
+* As a user, i want to be able to send a chatroom request to another user to hold a private chat.
+* As a user, i want to be able to hold a private chat with other users after they accept chat request.
+* As a user, i want to be able to change my "Nickname" or user display name
 
-### `npm test`
+# Questions
+## How do you plan on learning and implementing this new technology?
+* Websocket.io documentation is fairly extensive and elaborate, which will be helpful
+* Youtube tutorials, and google.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Goal with this Project:
+* Explore and implement the various uses and conveniences of real-time messaging by using Websockets
 
-### `npm run build`
+## Users for this App:
+* Anyone in an office work environment where continued and real-time communication is crucial to project success.
+* Teams of colleagues working on projects/classwork together.
+* Groups of friends who just want to shoot the shit
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## MVP
+* Successful implementation of a public chat room for users
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Stretch Goals
+* Private chat capability/DM capability between 2 users (not in public channel)
+* Implement a chat request modal/popup for when user wants to start a private chat with another user (for recieving user to click accept or ignore)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Wireframes
 
-### `npm run eject`
+## On socket connection
+![](./wireframes/p4socketconnection.jpg)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Public Chat Channel
+![](./wireframes/publicchannel.jpg)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Connected Users
+![](./wireframes/connectedusers.jpg)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Private Chat
+![](./wireframes/privatechat.jpg)
