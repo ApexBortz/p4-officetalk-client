@@ -9,7 +9,7 @@ I wanted to use websockets for this project, since it came up in discussion duri
 ## Client Side:
 * React.js
 * Websockets.io
-* Tailwind
+* Tailwind/Bootstrap (Undecided)
 
 ## Server Side:
 * Express
