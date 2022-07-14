@@ -1,6 +1,4 @@
-# Project 4 - OfficeTalk
-
-# OfficeTalk (O.T.)
+# Project 4 - OfficeTalk (O.T.)
 
 # App Description
 OfficeTalk is a messaging/chat application in which users can see others users online, and engage in real time online conversation with them! Users will be able to converse with any other user on their server, and send public messages to other users on the server as well. This makes it great for workflow & office conversation without having to go see your colleagues in person!
