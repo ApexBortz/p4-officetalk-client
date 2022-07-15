@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react'
 
+// key id prefix
 const PREFIX = 'OfficeTalk'
 
-const Localstorage = (key, initialValue) => {
+// local storage to keep you 'signed in' even if you refresh page
+const useLocalStorage = (key, initialValue) => {
 
     const prefixKey = PREFIX + key
 
@@ -25,4 +27,4 @@ const Localstorage = (key, initialValue) => {
     return [ value, setValue ]
 }
 
-export default Localstorage
+export default useLocalStorage

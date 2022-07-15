@@ -1,7 +1,7 @@
 
 const Conversations = () => {
     return (
-        <div className="conversations">
+        <div className='Conversations'>
             Convos
         </div>
     )

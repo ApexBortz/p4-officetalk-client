@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  margin-top: 20px;
 }
 
 .App-logo {
@@ -7,8 +8,21 @@
   pointer-events: none;
 }
 
-.sidebar {
+.Sidebar {
   background-color: aliceblue;
+  border-radius: 15px;
+  display: flexbox;
+}
+
+.YourId {
+  display: flex;
+  flex-flow: column;
+  padding: 3px;
+  margin: 8px;
+  border-radius: 5px;
+  outline-style: solid;
+  outline-color: darkgray;
+  outline-width: 2px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
