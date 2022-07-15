@@ -21,6 +21,12 @@
   margin-left: 15px;
 }
 
+.ContactModal {
+  padding: 15px;
+  background-color: aliceblue;
+  display: flexbox;
+}
+
 .YourId {
   display: flex;
   flex-flow: column;

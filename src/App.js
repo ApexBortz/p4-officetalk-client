@@ -2,11 +2,17 @@ import './App.css'
 import Login from './components/Login'
 import Dashboard from './components/Dashboard'
 import useLocalStorage from './hooks/useLocalStorage'
+// import { ContactProvider } from './contexts/ContactProvider'
 
 const App = () => {
 
   const [ id, setId ] = useLocalStorage('id')
 
+  // const dashboardFunction = () => {
+  //     <ContactProvider>
+  //       <Dashboard id={id} />
+  //     </ContactProvider>
+  // }
 
   return (
     <div className="App">
