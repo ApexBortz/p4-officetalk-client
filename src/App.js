@@ -11,7 +11,7 @@ const App = () => {
   return (
     <div className="App">
 
-      <img src='/officetalk_5.png' alt='Officetalk' style={{ width: '30%' }} />
+      <img src='/officetalk_5.png' alt='Officetalk' style={{ width: '30%' }} className='MainLogo'/>
 
       { id ? <Dashboard id={id}/> : <Login onIdSubmit={setId}/> }
       

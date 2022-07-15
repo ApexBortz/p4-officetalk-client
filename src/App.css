@@ -3,6 +3,12 @@
   margin-top: 20px;
 }
 
+.MainLogo {
+  background-color: aliceblue;
+  padding: 15px;
+  border-radius: 10px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -12,6 +18,7 @@
   background-color: aliceblue;
   border-radius: 15px;
   display: flexbox;
+  margin-left: 15px;
 }
 
 .YourId {
