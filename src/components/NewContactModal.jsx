@@ -1,18 +1,19 @@
-import { Modal, Form, Button } from 'react-bootstrap'
+import React from 'react'
 import { useRef } from 'react'
+import { Modal, Form, Button } from 'react-bootstrap'
 import { useContacts } from '../contexts/ContactProvider'
 
 const NewContactModal = ({ closeModal }) => {
 
-    const id = useRef()
+    const idRef = useRef()
 
-    const name = useRef()
+    const nameRef = useRef()
 
     // const { createContact } = useContacts()
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        // createContact(id.current.value, name.current.value)
+        // createContact(idRef.current.value, nameRef.current.value)
         closeModal()
     }
 
@@ -25,12 +26,12 @@ const NewContactModal = ({ closeModal }) => {
 
                 <Form.Group>
                     <Form.Label>Username or Id</Form.Label>
-                    <Form.Control type='text' ref={id} required />
+                    <Form.Control type='text' ref={idRef} required />
                 </Form.Group>
 
                 <Form.Group>
                     <Form.Label>Nickname</Form.Label>
-                    <Form.Control type='text' ref={name} required />
+                    <Form.Control type='text' ref={nameRef} required />
                 </Form.Group>
 
                 <Button className='m-2' type='submit' variant='outline-success'>Create</Button>
