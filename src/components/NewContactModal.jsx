@@ -10,12 +10,12 @@ const NewContactModal = ({ closeModal }) => {
 
     const nameRef = useRef()
 
-    const createContact  = useContacts()
+    const { createContact }  = useContacts()
 
     // submit handler to make new contact
     const handleSubmit = (e) => {
         e.preventDefault()
-
+        
         createContact(idRef.current.value, nameRef.current.value)
 
         closeModal()

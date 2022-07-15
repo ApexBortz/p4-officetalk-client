@@ -7,17 +7,17 @@ const Contacts = () => {
     const contacts = useContacts()
 
     return (
-        <ListGroup>
-            { contacts.map(contact => (
-                <ListGroup.Item key={contact.id}>
-                    { contact.name }
-                </ListGroup.Item>
-            ))}
-        </ListGroup>
+        // <ListGroup>
+        //     { contacts.map(contact => (
+        //         <ListGroup.Item key={contact.id}>
+        //             { contact.name }
+        //         </ListGroup.Item>
+        //     ))}
+        // </ListGroup>
 
-        // <div className='Contacts'>
-        //     Contacts
-        // </div>
+        <div className='Contacts'>
+            Contacts
+        </div>
     )
 }
 
