@@ -21,11 +21,11 @@ const Login = ({ onIdSubmit }) => {
         <Container className='align-items-center d-flex' style={{ height: '50vh' }}>
             <Form onSubmit={handleSubmit} className='w-50'>
                 <Form.Group>
-                    <Form.Label>Enter Name</Form.Label>
+                    <Form.Label>Enter Your Username</Form.Label>
                     <Form.Control type='text' ref={id}></Form.Control>
                 </Form.Group>
-                <Button type='submit' className='m-2'>Enter</Button>
-                <Button onClick={createNewId} variant='secondary'>Create New Id</Button>
+                <Button type='submit' variant='outline-success' className='m-2'>Confirm</Button>
+                <Button onClick={createNewId} variant='outline-secondary'>Create New Id</Button>
             </Form>
         </Container>
     )

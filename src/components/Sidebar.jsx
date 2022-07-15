@@ -11,10 +11,10 @@ const Sidebar = ({ id }) => {
     const [ activeKey, setActiveKey ] = useState(conversations_key)
 
     return (
-        <div className='flex flex-column' style={{ widht: '150px' }} >
+        <div className='sidebar' style={{ width: '250px' }} >
             <Tab.Container activeKey={activeKey} onSelect={setActiveKey} >
-                
-                <Nav variant='tabs' className='justif-content-center' >
+
+                <Nav variant='pills flex-column-2' className='justif-content-center p-3 mt-2' >
                     <Nav.Item>
                         <Nav.Link eventKey={conversations_key}>Your Chats</Nav.Link>
                     </Nav.Item>
@@ -23,13 +23,13 @@ const Sidebar = ({ id }) => {
                     </Nav.Item>
                 </Nav>
 
-                <Tab.Content>
+                <Tab.Content className='mt-3'>
                     <Tab.Pane eventKey={conversations_key}>
                         <Conversations />
                     </Tab.Pane>
                 </Tab.Content>
 
-                <Tab.Content>
+                <Tab.Content className='mt-3'>
                     <Tab.Pane eventKey={contacts_key}>
                         <Contacts />
                     </Tab.Pane>
