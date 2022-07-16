@@ -17,8 +17,8 @@ const NewConversationModal = ({ closeModal }) => {
     // handle submit function for creating new conversation
     const handleSubmit = (e) => {
         e.preventDefault()
-
-        createConversation(selectedContacts)
+        console.log(useConversations)
+        // createConversation(selectedContacts)
 
         closeModal()
     }

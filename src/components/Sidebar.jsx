@@ -17,8 +17,10 @@ const Sidebar = ({ id }) => {
     // useState for open & closing contact & conversation modals
     const [ modalOpen, setModalOpen ] = useState(false)
 
+    // activekey for switching active tabs
     const openConversation = activeKey === conversations_key
 
+    // close modal function that gets passed into both modals
     const closeModal = () => {
         setModalOpen(false)
     }
