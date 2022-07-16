@@ -4,20 +4,16 @@ import { ListGroup } from 'react-bootstrap'
 
 const Contacts = () => {
 
-    const contacts = useContacts()
+    const { contacts } = useContacts()
 
     return (
-        // <ListGroup>
-        //     { contacts.map(contact => (
-        //         <ListGroup.Item key={contact.id}>
-        //             { contact.name }
-        //         </ListGroup.Item>
-        //     ))}
-        // </ListGroup>
-
-        <div className='Contacts'>
-            Contacts
-        </div>
+        <ListGroup variant='flush' >
+            { contacts.map(contact => (
+                <ListGroup.Item key={contact.id}>
+                    { contact.name }
+                </ListGroup.Item>
+            ))}
+        </ListGroup>
     )
 }
 
