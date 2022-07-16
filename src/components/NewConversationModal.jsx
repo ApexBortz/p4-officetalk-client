@@ -12,13 +12,13 @@ const NewConversationModal = ({ closeModal }) => {
     // importing our contacts
     const { contacts } = useContacts()
 
-    const { createConversation } = useConversations
+    const { createConversation } = useConversations()
 
     // handle submit function for creating new conversation
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        // createConversation(selectedContacts)
+        createConversation(selectedContacts)
 
         closeModal()
     }
@@ -37,7 +37,7 @@ const NewConversationModal = ({ closeModal }) => {
 
     return (
         <div className='ContactModal'>
-        <Modal.Header closeButton>New Contact</Modal.Header>
+        <Modal.Header closeButton>New Conversation</Modal.Header>
         <Modal.Body>
 
             <Form onSubmit={handleSubmit} >

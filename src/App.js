@@ -10,7 +10,7 @@ const App = () => {
   // local storage of user id/username
   const [ id, setId ] = useLocalStorage('id')
 
-  // dashboard function to provide the context & render dashboard
+  // dashboard function to provide both contexts & render dashboard
   const dashboardFunction = () => {
     return(
       <ContactProvider>
