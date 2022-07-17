@@ -9,7 +9,7 @@ const NewConversationModal = ({ closeModal }) => {
     // state for selected contacts
     const [ selectedContacts, setSelectedContacts ] = useState([])
 
-    // importing our contacts
+    // importing contacts by extracting from usecontacts function
     const { contacts } = useContacts()
 
     const { createConversation } = useConversations()
@@ -17,12 +17,13 @@ const NewConversationModal = ({ closeModal }) => {
     // handle submit function for creating new conversation
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log(useConversations)
-        // createConversation(selectedContacts)
+        // console.log(useConversations)
+        createConversation(selectedContacts)
 
         closeModal()
     }
 
+    // check box change
     const handleCheckboxChange = (contactId) => {
         setSelectedContacts(prevSelectedContacts => {
             if(prevSelectedContacts.includes(contactId)) {
@@ -50,7 +51,6 @@ const NewConversationModal = ({ closeModal }) => {
                             onChange={() => handleCheckboxChange(contact.id)} />
                     </Form.Group>
                 ))}
-
 
                 <Button className='mt-3' type='submit' variant='outline-success'>Create</Button>
 
