@@ -22,9 +22,10 @@ const App = () => {
   }
 
   return (
-    <div className="App">
-
-      <img src='/officetalk_5.png' alt='Officetalk' style={{ width: '30%' }} className='MainLogo'/>
+    <div className='App'>
+      <div className='Header'>
+        <img src='/officetalk_5.png' alt='Officetalk' style={{ width: '25%' }} className='MainLogo'/>
+      </div>
 
       { id ? dashboardFunction() : <Login onIdSubmit={setId}/> }
       

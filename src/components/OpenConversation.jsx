@@ -16,10 +16,12 @@ const OpenConversation = () => {
         e.preventDefault()
 
         sendMessage(selectedConversation.recipients.map(recipient => recipient.id), text)
+
+        setText('')
     }
 
     return (
-        <div className='flexbox d-flex flex-column flex-grow-1'>
+        <div className='mx-2 flexbox d-flex flex-column flex-grow-1 rounded' style={{ border: 'solid lightgray 2px', height: '85vh' }}>
             <div className='flex-grow-1 overflow-auto'>
                 <div className='h-100 d-flex flex-column align-items-start justify-content-end'>
 
@@ -44,9 +46,9 @@ const OpenConversation = () => {
             </div>
 
             </div>
-            <Form onSubmit={handleSubmit} className='TextBox'>
+            <Form onSubmit={handleSubmit} className='MessageForm' >
                 <Form.Group>
-                    <InputGroup>
+                    <InputGroup className='TextBox'>
                         <Form.Control 
                             as='textarea' 
                             value={text}
