@@ -9,16 +9,18 @@ const Contacts = () => {
 
     // mapping through contacts list
     return (
-        <ListGroup >
-            { contacts.map(contact => (
-                <ListGroup.Item 
-                    key={contact.id}
-                    variant='info'
-                    className='ContactList' >
-                    { contact.name }
-                </ListGroup.Item>
-            ))}
-        </ListGroup>
+        <div>
+            <ListGroup >
+                { contacts.map(contact => (
+                    <ListGroup.Item 
+                        key={contact.id}
+                        variant='info'
+                        className='ContactList' >
+                        { contact.name }
+                    </ListGroup.Item>
+                ))}
+            </ListGroup>
+        </div>
     )
 }
 
