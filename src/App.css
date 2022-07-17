@@ -1,4 +1,5 @@
 .App {
+  background-color: white;
   text-align: center;
   margin-top: 20px;
 }
@@ -19,6 +20,27 @@
   border-radius: 15px;
   display: flexbox;
   margin-left: 15px;
+  padding: 4px;
+  height: 80vh;
+}
+
+.TextBox {
+  height: 33vh;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+
+.ConversationList {
+  background-color: aliceblue;
+  border-radius: 5px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.ContactList {
+  margin: 3px;
+  border-radius: 5px;
 }
 
 .ContactModal {

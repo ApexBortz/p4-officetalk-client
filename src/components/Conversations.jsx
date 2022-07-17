@@ -9,13 +9,14 @@ const Conversations = () => {
     return (
         
         // displaying the conversations youve started along with the contacts in that conversation
-        <ListGroup variant='flush' >
+        <ListGroup variant='' >
             { conversations.map((conversation, index) => (
                 <ListGroup.Item 
                     key={index} 
                     action
                     onClick={() => selectConversationIndex(index)}
-                    active={conversation.selected} >
+                    active={conversation.selected}
+                    className='ConversationList' >
 
                     { conversation.recipients.map(recipient => recipient.name).join(', ') }
 
