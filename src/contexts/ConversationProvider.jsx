@@ -24,26 +24,21 @@ export function ConversationProvider({ children }) {
         })
     }
 
-    // convo formatter to pass it into context provider easier
-    // const formattedConvos = conversations.map(conversation => {
-    //     const recipients = conversation.recipients.map(recipient => {
-    //         const contact = contacts.find(contact => {
-    //             return contact.id === recipient
-    //         })
-    //         const name = (contact && contact.name) || recipient
-    //         return { id: recipient, name }
-    //     })
-    //     return { ...conversation, recipients }
-    // })
+    // conversation formatter
+    const formattedConvos = conversations.map(conversation => {
+        const recipients = conversation.recipients.map(recipient => {
+            const contact = contacts.find(contact => {
+                return contact.id === recipient
+            })
+            const name = (contact && contact.name) || recipient
+            return { id: recipient, name }
+        })
+        return { ...conversation, recipients }
+    })
 
-    // make formattedconvos & createconvo value so we can just pass 'value' into the context provider
-    // const value = {
-    //     conversations: formattedConvos,
-    //     createConversation
-    // }
 
     return (
-        <ConversationContext.Provider value={{ conversations, createConversation }} >
+        <ConversationContext.Provider value={{ conversations: formattedConvos, createConversation }} >
             { children }
         </ConversationContext.Provider>
     )
