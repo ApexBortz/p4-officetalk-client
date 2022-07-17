@@ -55,9 +55,6 @@ const Sidebar = ({ id }) => {
                     Your Id: <span className='text-muted'>{id}</span>
                 </div>
 
-                <Button onClick={() => setModalOpen(true)} variant='outline-success'>
-                    New { openConversation ? 'Conversation' : 'Contact'}
-                </Button>
 
             </Tab.Container>
 
@@ -66,6 +63,10 @@ const Sidebar = ({ id }) => {
                     <NewConversationModal closeModal={closeModal} /> : 
                     <NewContactModal closeModal={closeModal} /> }
             </Modal>
+
+                <Button onClick={() => setModalOpen(true)} variant='outline-success'>
+                    New { openConversation ? 'Conversation' : 'Contact'}
+                </Button>
 
         </div>
     )

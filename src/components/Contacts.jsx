@@ -15,7 +15,7 @@ const Contacts = () => {
                 { contacts.map(contact => (
                     <ListGroup.Item 
                         key={contact.id}
-                        variant='info'
+                        variant='primary'
                         className='ContactList' >
                         { contact.name }
                     </ListGroup.Item>
