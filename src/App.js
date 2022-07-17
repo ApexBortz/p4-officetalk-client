@@ -14,7 +14,7 @@ const App = () => {
   const dashboardFunction = () => {
     return(
       <ContactProvider>
-        <ConversationProvider>
+        <ConversationProvider id={id} >
           <Dashboard id={id} />
         </ConversationProvider>
       </ContactProvider>

@@ -20,8 +20,28 @@ const OpenConversation = () => {
 
     return (
         <div className='flexbox d-flex flex-column flex-grow-1'>
-            open conversation
             <div className='flex-grow-1 overflow-auto'>
+                <div className='h-100 d-flex flex-column align-items-start justify-content-end'>
+
+                {/* map send messages & & sender */}
+                {selectedConversation.messages.map((message, index) => {
+                    return (
+                        <div className={`${message.fromMe ? 'align-self-end' : ''}`}>
+                            <div key={index} className='MessageBubble'>
+
+                                <div className={`rounded px-3 py-2 ${message.fromMe ? 'bg-primary text-white' : 'bg-success text-white'}`}>
+                                    {message.text}
+                                </div>
+
+                                <div className='ContactLabel'>
+                                    {message.fromMe ? 'You' : message.senderName}
+                                </div>
+
+                            </div>
+                        </div>
+                    )
+                })}
+            </div>
 
             </div>
             <Form onSubmit={handleSubmit} className='TextBox'>
@@ -33,7 +53,7 @@ const OpenConversation = () => {
                             onChange={e => setText(e.target.value)}
                             style={{ height: '100px', resize: 'inherit' }}
                             required />
-                            <Button variant='success' type='submit'>Send</Button>
+                            <Button variant='outline-success' type='submit'>Send</Button>
                     </InputGroup>
                 </Form.Group>
             </Form>

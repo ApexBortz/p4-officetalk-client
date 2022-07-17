@@ -31,6 +31,19 @@
   margin-bottom: 10px;
 }
 
+.MessageBubble {
+  display:flex;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.ContactLabel {
+  color: lightgray;
+  margin-left: 5px;
+  font-size: 10px;
+  padding-right: 5px;
+}
+
 .ConversationList {
   background-color: aliceblue;
   border-radius: 5px;
@@ -60,12 +73,6 @@
   outline-width: 2px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -81,11 +88,3 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

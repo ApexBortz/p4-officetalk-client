@@ -4,8 +4,10 @@ import { ListGroup } from 'react-bootstrap'
 
 const Contacts = () => {
 
+    // extracting contacts from usecontacts
     const { contacts } = useContacts()
 
+    // mapping through contacts list
     return (
         <ListGroup >
             { contacts.map(contact => (
