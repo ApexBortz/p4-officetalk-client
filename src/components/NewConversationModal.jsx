@@ -9,7 +9,7 @@ const NewConversationModal = ({ closeModal }) => {
     // state for selected contacts
     const [ selectedContacts, setSelectedContacts ] = useState([])
 
-    // importing contacts by extracting from usecontacts function
+    // extracting contacts from context provider
     const { contacts } = useContacts()
 
     const { createConversation } = useConversations()
