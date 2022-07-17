@@ -1,13 +1,18 @@
 import React from 'react'
 import { Form, InputGroup, Button } from 'react-bootstrap'
 import { useState } from 'react'
+import { useRef, useEffect } from 'react'
 import { useConversations } from '../contexts/ConversationProvider'
+
 
 // component to show open conversations & textbox with message send form
 const OpenConversation = () => {
 
     // usestate for the text in message box
     const [ text, setText ] = useState('')
+    
+    // useref for scrolling down to last message in box
+    const lastMessageRef = useRef()
 
     const { sendMessage, selectedConversation } = useConversations()
 
@@ -20,16 +25,25 @@ const OpenConversation = () => {
         setText('')
     }
 
+    useEffect(() => {
+        if(lastMessageRef.current) {
+            lastMessageRef.current.scrollIntoView({ smooth: true })
+        }
+    })
+
     return (
-        <div className='mx-2 flexbox d-flex flex-column flex-grow-1 rounded' style={{ border: 'solid lightgray 2px', height: '85vh' }}>
-            <div className='flex-grow-1 overflow-auto'>
+        <div className='mx-2 flexbox d-flex flex-column flex-grow-1 rounded overflow-auto' 
+             style={{ border: 'solid lightgray 2px', height: '95vh' }}>
+            <div className='flex-grow-1'>
                 <div className='h-100 d-flex flex-column align-items-start justify-content-end'>
 
                 {/* map send messages & & sender */}
                 {selectedConversation.messages.map((message, index) => {
+                    const lastMessage = selectedConversation.messages.length - 1 === index
                     return (
                         <div className={`${message.fromMe ? 'align-self-end' : ''}`}>
-                            <div key={index} className='MessageBubble'>
+                            <div key={index} className='MessageBubble'
+                                 ref={lastMessage ? lastMessageRef : null} >
 
                                 <div className={`rounded px-3 py-2 ${message.fromMe ? 'bg-primary text-white' : 'bg-success text-white'}`}>
                                     {message.text}

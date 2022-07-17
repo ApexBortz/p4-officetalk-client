@@ -18,6 +18,11 @@ const Login = ({ onIdSubmit }) => {
     }
 
     return (
+    <div>
+        <div className='Header'>
+            <img src='/officetalk_5.png' alt='Officetalk' style={{ width: '25%' }} className='MainLogo'/>
+        </div>
+
         <Container className='justify-content-center align-items-center d-flex' style={{ height: '50vh' }}>
             <Form onSubmit={handleSubmit} className='w-50'>
                 <Form.Group>
@@ -28,6 +33,8 @@ const Login = ({ onIdSubmit }) => {
                 <Button onClick={createNewId} variant='outline-secondary'>Create New Id</Button>
             </Form>
         </Container>
+    </div>
+
     )
 }
 

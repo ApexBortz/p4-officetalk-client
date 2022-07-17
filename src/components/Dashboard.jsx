@@ -8,7 +8,7 @@ const Dashboard = ({ id }) => {
     const { selectedConversation } = useConversations()
 
     return (
-        <div className='d-flex' style={{ height: '100vh' }} >
+        <div className='d-flex' style={{ height: '95vh' }} >
             <Sidebar id={id} />
             { selectedConversation && <OpenConversation /> }
         </div>

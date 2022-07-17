@@ -1,7 +1,7 @@
 .App {
   background-color: white;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .MainLogo {
@@ -16,7 +16,7 @@
   display: flexbox;
   margin-left: 15px;
   padding: 4px;
-  height: 85vh;
+  height: 95vh;
 }
 
 .Header {

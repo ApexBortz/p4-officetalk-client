@@ -2,6 +2,7 @@ import React from 'react'
 import { useContacts } from '../contexts/ContactProvider'
 import { ListGroup } from 'react-bootstrap'
 
+
 const Contacts = () => {
 
     // extracting contacts from usecontacts
