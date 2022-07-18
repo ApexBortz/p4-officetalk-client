@@ -15,8 +15,8 @@ const Conversations = () => {
         <ListGroup>
             { conversations.map((conversation, index) => (
                 <ListGroup.Item 
-                    key={index} 
                     action
+                    key={index} 
                     onClick={() => selectConversationIndex(index)}
                     active={conversation.selected}
                     className='ConversationList'
