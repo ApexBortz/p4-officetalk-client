@@ -31,7 +31,7 @@ const Sidebar = ({ id }) => {
     }
 
     return (
-        <div className='Sidebar' style={{ width: '270px' }} >
+        <div className='Sidebar' >
 
             <Tab.Container activeKey={activeKey} onSelect={setActiveKey} >
 

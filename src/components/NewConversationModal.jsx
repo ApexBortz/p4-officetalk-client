@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { Modal, Form, Button } from 'react-bootstrap'
 import { useContacts } from '../contexts/ContactProvider'
 import { useConversations } from '../contexts/ConversationProvider'
+import { UploadIcon } from '@heroicons/react/outline'
 
 const NewConversationModal = ({ closeModal }) => {
 
@@ -52,8 +53,9 @@ const NewConversationModal = ({ closeModal }) => {
                     </Form.Group>
                 ))}
 
-                <Button className='mt-3' type='submit' variant='outline-success'>Create</Button>
-
+                <Button className='mt-3' type='submit' variant='outline-success'>
+                    Create <UploadIcon className='CreateConvo' />
+                </Button>
             </Form>
 
         </Modal.Body>

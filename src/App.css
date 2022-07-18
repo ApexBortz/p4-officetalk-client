@@ -12,8 +12,10 @@
 
 .Sidebar {
   background-color: aliceblue;
+  border: solid lightgray 2px;
   border-radius: 15px;
   display: flexbox;
+  width: 273px;
   margin-left: 15px;
   padding: 3px;
   height: 95vh;
@@ -55,6 +57,12 @@
   margin-left: 5px;
   font-size: 12px;
   padding-right: 5px;
+}
+
+.CreateConvo {
+  height: 20px;
+  margin-left: 5px;
+  margin-bottom: 3px;
 }
 
 .ContactIcon {
