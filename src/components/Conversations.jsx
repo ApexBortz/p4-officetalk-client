@@ -19,7 +19,8 @@ const Conversations = () => {
                     action
                     onClick={() => selectConversationIndex(index)}
                     active={conversation.selected}
-                    className='ConversationList' >
+                    className='ConversationList'
+                    variant='primary' >
 
                     { conversation.recipients.map(recipient => recipient.name).join(', ') }
                     <ChatAltIcon className='ChatIcon' />

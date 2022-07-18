@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { Tab, Nav, Button, Modal } from 'react-bootstrap'
 import { ChatAlt2Icon } from '@heroicons/react/outline'
+import { UserGroupIcon } from '@heroicons/react/outline'
 import { UserAddIcon } from '@heroicons/react/outline'
 import { IdentificationIcon } from '@heroicons/react/outline'
 import { InboxInIcon } from '@heroicons/react/outline'
@@ -30,7 +31,7 @@ const Sidebar = ({ id }) => {
     }
 
     return (
-        <div className='Sidebar' style={{ width: '250px' }} >
+        <div className='Sidebar' style={{ width: '270px' }} >
 
             <Tab.Container activeKey={activeKey} onSelect={setActiveKey} >
 
@@ -42,7 +43,7 @@ const Sidebar = ({ id }) => {
                     </Nav.Item>
                     <Nav.Item>
                         <Nav.Link eventKey={contacts_key}>
-                            Contacts 
+                            Contacts <UserGroupIcon className='ContactIcon' />
                         </Nav.Link>
                     </Nav.Item>
                 </Nav>
@@ -75,7 +76,7 @@ const Sidebar = ({ id }) => {
                 New { openConversation ? 'Conversation' : 'Contact'}
                 { openConversation ? <ChatAlt2Icon className='ChatIcon' /> : <UserAddIcon className='UserAdd'/>}
             </Button>
-            
+
         </div>
     )
 }

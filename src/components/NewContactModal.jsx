@@ -2,6 +2,7 @@ import React from 'react'
 import { useRef } from 'react'
 import { Modal, Form, Button } from 'react-bootstrap'
 import { useContacts } from '../contexts/ContactProvider'
+import { SaveIcon } from '@heroicons/react/outline'
 
 // new contact modal
 const NewContactModal = ({ closeModal }) => {
@@ -34,11 +35,13 @@ const NewContactModal = ({ closeModal }) => {
                 </Form.Group>
 
                 <Form.Group className='mt-2'>
-                    <Form.Label>Save As:</Form.Label>
+                    <Form.Label>Save as:</Form.Label>
                     <Form.Control type='text' ref={nameRef} required />
                 </Form.Group>
 
-                <Button className='mt-3' type='submit' variant='outline-success'>Create</Button>
+                <Button className='mt-3' type='submit' variant='outline-success'>
+                    Create <SaveIcon className='SaveContactIcon'/>
+                </Button>
 
             </Form>
 

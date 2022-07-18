@@ -15,12 +15,13 @@
   border-radius: 15px;
   display: flexbox;
   margin-left: 15px;
-  padding: 4px;
+  padding: 3px;
   height: 95vh;
 }
 
 .SidebarContainer {
-  padding-top: 10px;
+  margin-left: 3px;
+  margin-top: 10px;
 }
 
 .Header {
@@ -56,8 +57,12 @@
   padding-right: 5px;
 }
 
+.ContactIcon {
+  height: 20px;
+  margin-bottom: 3px;
+}
+
 .ConversationList {
-  background-color: aliceblue;
   border-radius: 5px;
   margin-top: 2px;
   margin-bottom: 2px;
@@ -66,16 +71,20 @@
 .YourChatIcon {
   height: 20px;
   width: 20px;
-  color: rgb(19, 82, 250);
   margin-bottom: 3px;
 }
 
 .UserAdd {
   height: 20px;
   width: 20px;
-  color: white;
   margin-left: 10px;
   margin-bottom: 3px;
+}
+
+.SaveContactIcon {
+  height: 20px;
+  margin-bottom: 3px;
+  margin-left: 5px;
 }
 
 .IdIcon {
@@ -86,7 +95,6 @@
 .ChatIcon {
   height: 25px;
   width: 25px;
-  color: white;
   margin-left: 10px;
 }
 
