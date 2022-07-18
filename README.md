@@ -6,22 +6,22 @@ OfficeTalk is a messaging/chat application in which users can see others users o
 # Technologies Used
 I wanted to use websockets for this project, since it came up in discussion during the last project for implementing direct messaging to our social media app. Usually chat applications require polling the server for changes, keeping track of timestamps, and a myriad of other processes and in the past this has been very inefficient and slower than it should be. However, Websockets intrigued me for implementing a real-time chat system since it provides bi-directional communication between the client and server. Socket.io enables low-latency and event-based communication between client and server. This means that the server pushes messages to the client, and the server does not need to continuously check if a message has been sent.
 
-## Client Side:
+## Client Stacks:
 * React.js
-* Websockets.io
+* Socket.io
+* Heroicons
 * Tailwind or Bootstrap (Undecided)
 
-## Server Side:
-* Express
+## Server Stacks:
 * Node.js
+* Socket.io
 
 # User Stories:
-* As a user, i want to access a public chat room
-* As a user, i want to be able to send announcements/messages to the public chat room.
-* As a user, i want to see other users online that i can chat with.
-* As a user, i want to be able to send a chatroom request to another user to hold a private chat.
-* As a user, i want to be able to hold a private chat with other users after they accept chat request.
-* As a user, i want to be able to change my "Nickname" or user display name
+* As a user i want a simple/temporary log-in to create an id (or generate random id)
+* As a user i want to be able to add contacts & see them in my contact list
+* As a user, i want to be able to send messages to other users
+* As a user, i want to be able to start a chat with a single user
+* As a user, i want to be able to start a chat with multiple users
 
 # Questions
 ## How do you plan on learning and implementing this new technology?
@@ -42,7 +42,7 @@ I wanted to use websockets for this project, since it came up in discussion duri
 
 ## Stretch Goals
 * Ability to add contacts & save them
-* Implement selecting multiple contacts for group conversations
+* Implement adding multiple contacts to group conversation
 * Implement a chat request modal/popup for when user wants to start a private chat with another user (for recieving user to click accept or ignore)
 
 # Wireframes
