@@ -65,9 +65,9 @@ export function ConversationProvider({ id, children }) {
     useEffect(() => {
         if (socket === null) return
         // call addmessage function if socket connection detects received message
-        socket.on('receive-message', addMessage)
-        
-        return () => socket.off('receive-message')
+        socket.addEventListener('receive-message', addMessage)
+
+        return () => socket.dispatchEventListener('receive-message')
     }, [socket, addMessage])
 
     // sendmessage function
