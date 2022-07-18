@@ -9,7 +9,7 @@ I wanted to use websockets for this project, since it came up in discussion duri
 ## Client Side:
 * React.js
 * Websockets.io
-* Tailwind/Bootstrap (Undecided)
+* Tailwind or Bootstrap (Undecided)
 
 ## Server Side:
 * Express
@@ -37,10 +37,12 @@ I wanted to use websockets for this project, since it came up in discussion duri
 * Groups of friends who just want to shoot the shit
 
 ## MVP
-* Successful implementation of a public chat room for users
+* Ability to create your own username, or generate an id for app useage
+* Successful implementation of chat room for users
 
 ## Stretch Goals
-* Private chat capability/DM capability between 2 users (not in public channel)
+* Ability to add contacts & save them
+* Implement selecting multiple contacts for group conversations
 * Implement a chat request modal/popup for when user wants to start a private chat with another user (for recieving user to click accept or ignore)
 
 # Wireframes
@@ -48,11 +50,11 @@ I wanted to use websockets for this project, since it came up in discussion duri
 ## On socket connection
 ![](./wireframes/p4socketconnection.jpg)
 
-## Public Chat Channel
-![](./wireframes/publicchannel.jpg)
-
 ## Connected Users
 ![](./wireframes/connectedusers.jpg)
 
 ## Private Chat
 ![](./wireframes/privatechat.jpg)
+
+## Public Chat Channel
+![](./wireframes/publicchannel.jpg)

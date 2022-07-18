@@ -30,7 +30,7 @@ export function ConversationProvider({ id, children }) {
         })
     }
 
-    // the actual function that adds message to the conversation
+    // function that adds message to conversation
     function addMessage({ recipients, text, sender }) {
         setConversations(prevConversations => {
             // madeChange to check if new message sent to conversation

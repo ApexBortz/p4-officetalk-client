@@ -12,13 +12,12 @@ const OpenConversation = () => {
     // usestate for the text in message box
     const [ text, setText ] = useState('')
     
-    // useref for scrolling down to last message in box
     // const lastMessageRef = useRef()
 
-    // usecallback to scroll down to last message when you send a message
+    // usecallback to scroll down to last message when you send a message instead of when you start typing
     const setRef = useCallback(newestMessage => {
         if(newestMessage) {
-            newestMessage.scrollIntoView({ smooth: true })
+            newestMessage.scrollIntoView()
         }
     }, [])
 
@@ -33,9 +32,10 @@ const OpenConversation = () => {
         setText('')
     }
 
+    // useffect to help keep the overflow down at bottom
     // useEffect(() => {
     //     if(lastMessageRef.current) {
-    //         lastMessageRef.current.scrollIntoView({ smooth: true })
+    //         lastMessageRef.current.scrollIntoView()
     //     }
     // })
 
