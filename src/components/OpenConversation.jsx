@@ -4,6 +4,7 @@ import { useState } from 'react'
 // import { useRef, useEffect } from 'react'
 import { useConversations } from '../contexts/ConversationProvider'
 import { useCallback } from 'react'
+import { ArrowCircleUpIcon } from '@heroicons/react/outline'
 
 
 // component to show open conversations & textbox with message send form
@@ -68,7 +69,7 @@ const OpenConversation = () => {
                 })}
             </div>
 
-            </div>
+        </div>
 
             <Form onSubmit={handleSubmit} className='MessageForm' >
                 <Form.Group>
@@ -79,7 +80,11 @@ const OpenConversation = () => {
                             onChange={e => setText(e.target.value)}
                             style={{ height: '80px', resize: 'inherit' }}
                             required />
-                            <Button variant='outline-success' type='submit'>Send</Button>
+
+                        <Button variant='outline-success' type='submit'>
+                            <ArrowCircleUpIcon />
+                            Send
+                        </Button>
                     </InputGroup>
                 </Form.Group>
             </Form>
