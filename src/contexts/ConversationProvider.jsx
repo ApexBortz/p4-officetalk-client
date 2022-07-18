@@ -1,8 +1,10 @@
 import React from 'react'
+import useLocalStorage from '../hooks/useLocalStorage'
 import { useContext } from 'react'
 import { useState } from 'react'
-import useLocalStorage from '../hooks/useLocalStorage'
 import { useContacts } from './ContactProvider'
+import { useSocket } from './SocketConnection'
+import { useEffect } from 'react'
 
 
 const ConversationContext = React.createContext()
@@ -22,6 +24,9 @@ export function ConversationProvider({ id, children }) {
 
     // extracting contacts from context provider
     const { contacts } = useContacts()
+
+    // socket import
+    const socket = useSocket()
 
     // create new conversation function
     function createConversation(recipients) {
@@ -55,8 +60,18 @@ export function ConversationProvider({ id, children }) {
         })
     }
 
-    // sendmessage function to pass back into openconversations
+    // useEffect to prevent this from re-running
+    useEffect(() => {
+        if (socket === null) return
+        // call addmessage function if socket connection detects received message
+        socket.on('receive-message', addMessage)
+    })
+
+    // sendmessage function
     function sendMessage(recipients, text) {
+
+        socket.emit('send-message', { recipients, text })
+
         addMessage({ recipients, text, sender: id })
     }
 
