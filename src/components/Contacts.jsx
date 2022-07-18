@@ -5,13 +5,13 @@ import { ListGroup } from 'react-bootstrap'
 
 const Contacts = () => {
 
-    // extracting contacts from usecontacts
+    // extract contacts from usecontacts
     const { contacts } = useContacts()
 
-    // mapping through contacts list
+    // map through contacts
     return (
         <div>
-            <ListGroup >
+            <ListGroup>
                 { contacts.map(contact => (
                     <ListGroup.Item 
                         key={contact.id}

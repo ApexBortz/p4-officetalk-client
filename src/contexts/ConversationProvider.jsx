@@ -36,7 +36,7 @@ export function ConversationProvider({ id, children }) {
         })
     }
 
-    // function that adds message to conversation / changed to usecallback
+    // function that adds message to conversation - changed to usecallback to use as dependency in useEffect
     const addMessage = useCallback(({ recipients, text, sender }) => {
         setConversations(prevConversations => {
             // madeChange to check if new message sent to conversation
@@ -81,7 +81,7 @@ export function ConversationProvider({ id, children }) {
         addMessage({ recipients, text, sender: id })
     }
 
-    // conversation formatter mapping through selected contacts for each conversation
+    // map the selected contacts in each conversation in chat list
     const formattedConvos = conversations.map((conversation, index) => {
         const recipients = conversation.recipients.map(recipient => {
             const contact = contacts.find(contact => {
@@ -91,7 +91,7 @@ export function ConversationProvider({ id, children }) {
             return { id: recipient, name }
         })
 
-        // map through messages to display them & the sender that each message is from
+        // map through messages to display message & sender
         const messages = conversation.messages.map(message => {
             const contact = contacts.find(contact => {
                 return contact.id === message.sender

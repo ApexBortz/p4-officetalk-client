@@ -11,7 +11,7 @@ const Conversations = () => {
 
     return (
         
-        // displaying conversations started along with contacts in that conversation
+        // display conversations along with contacts in that conversation
         <ListGroup>
             { conversations.map((conversation, index) => (
                 <ListGroup.Item 
