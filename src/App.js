@@ -9,7 +9,7 @@ import { SocketConnection } from './contexts/SocketConnection'
 const App = () => {
 
   // local storage of user id/username
-  const [ id, setId ] = useLocalStorage('id')
+  const [id, setId] = useLocalStorage('id')
 
   // dashboard function to pass in contexts and socket connection
   const dashboardFunction = () => {

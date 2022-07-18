@@ -19,6 +19,10 @@
   height: 95vh;
 }
 
+.SidebarContainer {
+  padding-top: 10px;
+}
+
 .Header {
   background-color: aliceblue;
   border-radius: 15px;
@@ -48,7 +52,7 @@
 .ContactLabel {
   color: lightgray;
   margin-left: 5px;
-  font-size: 10px;
+  font-size: 12px;
   padding-right: 5px;
 }
 
@@ -57,6 +61,33 @@
   border-radius: 5px;
   margin-top: 2px;
   margin-bottom: 2px;
+}
+
+.YourChatIcon {
+  height: 20px;
+  width: 20px;
+  color: rgb(19, 82, 250);
+  margin-bottom: 3px;
+}
+
+.UserAdd {
+  height: 20px;
+  width: 20px;
+  color: white;
+  margin-left: 10px;
+  margin-bottom: 3px;
+}
+
+.IdIcon {
+  height: 30px;
+  color: darkgray;
+}
+
+.ChatIcon {
+  height: 25px;
+  width: 25px;
+  color: white;
+  margin-left: 10px;
 }
 
 .ContactList {
@@ -73,14 +104,14 @@
 .YourId {
   display: flex;
   flex-flow: column;
-  position: sticky;
+  position:static;
   padding: 3px;
   margin: 8px;
   border-radius: 5px;
-  outline-style: solid;
-  outline-color: darkgray;
-  outline-width: 2px;
-  margin-top: 35vh;
+  border-style: solid;
+  border-color: darkgray;
+  border-width: 2px;
+  margin-top: 30vmin;
 }
 
 .App-header {

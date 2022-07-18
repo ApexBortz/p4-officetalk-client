@@ -61,13 +61,16 @@ export function ConversationProvider({ id, children }) {
         })
     }, [setConversations])
 
-    // useEffect to prevent this from re-running
+    // useEffect for this to run when new message is added
     useEffect(() => {
-        if (socket === null) return
-        // call addmessage function if socket connection detects received message
-        socket.addEventListener('receive-message', addMessage)
-
-        return () => socket.dispatchEventListener('receive-message')
+        if (socket == null) {
+            return
+        } else {
+            // event listener to call addmessage function if socket connection detects received message
+            socket.on('receive-message', addMessage)
+            // turns the event listener off afterwards
+            return () => socket.off('receive-message')
+        }
     }, [socket, addMessage])
 
     // sendmessage function
@@ -78,7 +81,7 @@ export function ConversationProvider({ id, children }) {
         addMessage({ recipients, text, sender: id })
     }
 
-    // conversation formatter mapping through selected contacts for each convo
+    // conversation formatter mapping through selected contacts for each conversation
     const formattedConvos = conversations.map((conversation, index) => {
         const recipients = conversation.recipients.map(recipient => {
             const contact = contacts.find(contact => {
@@ -88,7 +91,7 @@ export function ConversationProvider({ id, children }) {
             return { id: recipient, name }
         })
 
-        // mapping through messages to display them & the sender that each message is from
+        // map through messages to display them & the sender that each message is from
         const messages = conversation.messages.map(message => {
             const contact = contacts.find(contact => {
                 return contact.id === message.sender
@@ -102,7 +105,7 @@ export function ConversationProvider({ id, children }) {
         return { ...conversation, messages, recipients, selected }
     })
 
-    // wrapping everything to pass into the return in here since its alot
+    // wrapping everything to pass into the return in here cuz its alot
     const providerValue = {
         conversations: formattedConvos,
         selectedConversation : formattedConvos[selectedConversationIndex],

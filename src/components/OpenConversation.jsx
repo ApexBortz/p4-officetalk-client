@@ -77,7 +77,7 @@ const OpenConversation = () => {
                             as='textarea' 
                             value={text}
                             onChange={e => setText(e.target.value)}
-                            style={{ height: '100px', resize: 'inherit' }}
+                            style={{ height: '80px', resize: 'inherit' }}
                             required />
                             <Button variant='outline-success' type='submit'>Send</Button>
                     </InputGroup>

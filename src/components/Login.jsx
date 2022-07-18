@@ -8,11 +8,13 @@ const Login = ({ onIdSubmit }) => {
 
     const id = useRef()
 
+    // submit handler for creating new id
     const handleSubmit = (e) => {
         e.preventDefault()
         onIdSubmit(id.current.value)
     }
 
+    // create id function using v4 function from the uuid library to generate a random id
     const createNewId = () => {
         onIdSubmit(v4())
     }

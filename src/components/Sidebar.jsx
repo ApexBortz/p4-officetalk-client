@@ -1,6 +1,10 @@
 import React from 'react'
 import { useState } from 'react'
 import { Tab, Nav, Button, Modal } from 'react-bootstrap'
+import { ChatAlt2Icon } from '@heroicons/react/outline'
+import { UserAddIcon } from '@heroicons/react/outline'
+import { IdentificationIcon } from '@heroicons/react/outline'
+import { InboxInIcon } from '@heroicons/react/outline'
 import Contacts from './Contacts'
 import Conversations from './Conversations'
 import NewContactModal from './NewContactModal'
@@ -30,12 +34,16 @@ const Sidebar = ({ id }) => {
 
             <Tab.Container activeKey={activeKey} onSelect={setActiveKey} >
 
-                <Nav variant='pills flex-column-2' className='p-3 mt-2' >
+                <Nav variant='pills flex-column-2' className='SidebarContainer'>
                     <Nav.Item>
-                        <Nav.Link eventKey={conversations_key}>Your Chats</Nav.Link>
+                        <Nav.Link eventKey={conversations_key}>
+                            Your Chats <InboxInIcon className='YourChatIcon' />
+                        </Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link eventKey={contacts_key}>Contacts</Nav.Link>
+                        <Nav.Link eventKey={contacts_key}>
+                            Contacts 
+                        </Nav.Link>
                     </Nav.Item>
                 </Nav>
 
@@ -50,24 +58,24 @@ const Sidebar = ({ id }) => {
                         <Contacts />
                     </Tab.Pane>
                 </Tab.Content>
-
-                <div className='YourId'>
-                    Your Id: <span className='text-muted'>{id}</span>
-                </div>
-
-
             </Tab.Container>
-
+                
             <Modal show={modalOpen} onHide={closeModal} >
                 { openConversation ? 
                     <NewConversationModal closeModal={closeModal} /> : 
                     <NewContactModal closeModal={closeModal} /> }
             </Modal>
 
-                <Button onClick={() => setModalOpen(true)} variant='outline-success'>
-                    New { openConversation ? 'Conversation' : 'Contact'}
-                </Button>
+            <div className='YourId'>
+                <IdentificationIcon className='IdIcon' />
+                Your Id: <span className='text-muted'>{id}</span>
+            </div>
 
+            <Button onClick={() => setModalOpen(true)} variant='outline-success'>
+                New { openConversation ? 'Conversation' : 'Contact'}
+                { openConversation ? <ChatAlt2Icon className='ChatIcon' /> : <UserAddIcon className='UserAdd'/>}
+            </Button>
+            
         </div>
     )
 }

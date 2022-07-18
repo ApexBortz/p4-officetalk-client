@@ -29,12 +29,12 @@ const NewContactModal = ({ closeModal }) => {
             <Form onSubmit={handleSubmit} >
 
                 <Form.Group>
-                    <Form.Label>Username or Id</Form.Label>
+                    <Form.Label>Username or Id:</Form.Label>
                     <Form.Control type='text' ref={idRef} required />
                 </Form.Group>
 
-                <Form.Group>
-                    <Form.Label>Save As</Form.Label>
+                <Form.Group className='mt-2'>
+                    <Form.Label>Save As:</Form.Label>
                     <Form.Control type='text' ref={nameRef} required />
                 </Form.Group>
 
