@@ -36,12 +36,12 @@ const Sidebar = ({ id }) => {
             <Tab.Container activeKey={activeKey} onSelect={setActiveKey} >
 
                 <Nav variant='pills flex-column-2' className='SidebarContainer'>
-                    <Nav.Item>
+                    <Nav.Item className='NavTabs'>
                         <Nav.Link eventKey={conversations_key}>
                             Your Chats <InboxInIcon className='YourChatIcon' />
                         </Nav.Link>
                     </Nav.Item>
-                    <Nav.Item>
+                    <Nav.Item className='NavTabs'>
                         <Nav.Link eventKey={contacts_key}>
                             Contacts <UserGroupIcon className='ContactIcon' />
                         </Nav.Link>
@@ -54,7 +54,7 @@ const Sidebar = ({ id }) => {
                     </Tab.Pane>
                 </Tab.Content>
 
-                <Tab.Content className='mt-3 overflow-auto'>
+                <Tab.Content className='mt-2 overflow-auto'>
                     <Tab.Pane eventKey={contacts_key}>
                         <Contacts />
                     </Tab.Pane>
