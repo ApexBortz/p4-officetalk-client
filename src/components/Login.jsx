@@ -20,21 +20,22 @@ const Login = ({ onIdSubmit }) => {
     }
 
     return (
-    <div>
+    <div className='LoginScreen'>
         <div className='Header'>
             <img src='/officetalk_5.png' alt='Officetalk' style={{ width: '25%' }} className='MainLogo'/>
         </div>
 
-        <Container className='justify-content-center align-items-center d-flex' style={{ height: '50vh' }}>
+        <Container className='justify-content-center align-items-center d-flex' style={{ height: '40vh' }}>
             <Form onSubmit={handleSubmit} className='w-50'>
                 <Form.Group>
-                    <Form.Label>Enter Your Username</Form.Label>
+                    <Form.Label>Enter Username</Form.Label>
                     <Form.Control type='text' ref={id}></Form.Control>
                 </Form.Group>
                 <Button type='submit' variant='outline-success' className='m-2'>Confirm</Button>
                 <Button onClick={createNewId} variant='outline-secondary'>Create New Id</Button>
             </Form>
         </Container>
+
     </div>
 
     )
