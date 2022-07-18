@@ -49,6 +49,7 @@ const OpenConversation = () => {
                 {selectedConversation.messages.map((message, index) => {
                     const lastMessage = selectedConversation.messages.length - 1 === index
                     return (
+                        // classname ternary checks if message is from me
                         <div className={`${message.fromMe ? 'align-self-end' : ''}`} key={index}>
                             <div key={index} className='MessageBubble'
                                  ref={lastMessage ? setRef : null} >
@@ -58,7 +59,7 @@ const OpenConversation = () => {
                                     {message.text}
                                 </div>
 
-                                <div className='ContactLabel'>
+                                <div className='SenderLabel'>
                                     {message.fromMe ? 'You' : message.senderName}
                                 </div>
 
