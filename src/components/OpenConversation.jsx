@@ -49,11 +49,12 @@ const OpenConversation = () => {
                 {selectedConversation.messages.map((message, index) => {
                     const lastMessage = selectedConversation.messages.length - 1 === index
                     return (
-                        <div className={`${message.fromMe ? 'align-self-end' : ''}`}>
+                        <div className={`${message.fromMe ? 'align-self-end' : ''}`} key={index}>
                             <div key={index} className='MessageBubble'
                                  ref={lastMessage ? setRef : null} >
 
-                                <div className={`rounded px-3 py-2 ${message.fromMe ? 'bg-primary text-white' : 'bg-success text-white'}`}>
+                                <div className={`rounded px-3 py-2 ${message.fromMe ? 'bg-primary text-white' : 'bg-success text-white'}`}
+                                     key={index} >
                                     {message.text}
                                 </div>
 
