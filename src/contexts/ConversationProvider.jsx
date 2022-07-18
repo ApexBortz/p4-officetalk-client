@@ -5,6 +5,7 @@ import { useState } from 'react'
 import { useContacts } from './ContactProvider'
 import { useSocket } from './SocketConnection'
 import { useEffect } from 'react'
+import { useCallback } from 'react'
 
 
 const ConversationContext = React.createContext()
@@ -35,8 +36,8 @@ export function ConversationProvider({ id, children }) {
         })
     }
 
-    // function that adds message to conversation
-    function addMessage({ recipients, text, sender }) {
+    // function that adds message to conversation / changed to usecallback
+    const addMessage = useCallback(({ recipients, text, sender }) => {
         setConversations(prevConversations => {
             // madeChange to check if new message sent to conversation
             let madeChange = false
@@ -58,16 +59,16 @@ export function ConversationProvider({ id, children }) {
                 return [...prevConversations, { recipients, messages: [newMessage] } ]
             }
         })
-    }
+    }, [setConversations])
 
     // useEffect to prevent this from re-running
     useEffect(() => {
-        // if (socket === null) return
+        if (socket === null) return
         // call addmessage function if socket connection detects received message
-        // socket.on('receive-message', addMessage)
+        socket.on('receive-message', addMessage)
         
-        // return () => socket.off('receive-message')
-    })
+        return () => socket.off('receive-message')
+    }, [socket, addMessage])
 
     // sendmessage function
     function sendMessage(recipients, text) {
