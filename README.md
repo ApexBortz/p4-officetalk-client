@@ -17,8 +17,8 @@ I wanted to use websockets for this project, since it came up in discussion duri
 * Socket.io
 
 # User Stories:
-* As a user i want a simple/temporary log-in to create an id (or generate random id)
-* As a user i want to be able to add contacts & see them in my contact list
+* As a user, i want a simple/temporary log-in to create an id (or generate random id)
+* As a user, i want to be able to add contacts & see them in my contact list
 * As a user, i want to be able to send messages to other users
 * As a user, i want to be able to start a chat with a single user
 * As a user, i want to be able to start a chat with multiple users

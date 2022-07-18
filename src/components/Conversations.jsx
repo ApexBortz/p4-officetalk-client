@@ -27,7 +27,6 @@ const Conversations = () => {
                 </ListGroup.Item>
             ))}
         </ListGroup>
-
     )
 }
 

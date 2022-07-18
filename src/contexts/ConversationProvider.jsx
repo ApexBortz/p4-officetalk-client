@@ -49,7 +49,7 @@ export function ConversationProvider({ id, children }) {
                     madeChange = true
                     return { ...conversation, messages: [...conversation.messages, newMessage] }
                 }
-                // return the same conversation if no new messages sent
+                // return conversation if no new messages sent
                 return conversation
             })
 
@@ -109,8 +109,9 @@ export function ConversationProvider({ id, children }) {
     const providerValue = {
         conversations: formattedConvos,
         selectedConversation : formattedConvos[selectedConversationIndex],
+        sendMessage,
         selectConversationIndex: setSelectedConversationIndex,
-        createConversation, sendMessage
+        createConversation,
     }
 
     return (
@@ -122,12 +123,14 @@ export function ConversationProvider({ id, children }) {
 
 // function to check contacts in array
 const contactArrayMatch = (arrA, arrB) => {
-    if (arrA.length !== arrB.length) return false
+    if (arrA.length !== arrB.length) {
+        return false
+    } else {
+        arrA.sort()
+        arrB.sort()
 
-    arrA.sort()
-    arrB.sort()
-
-    return arrA.every((element, index) => {
-        return element === arrB[index]
-    })
+        return arrA.every((element, index) => {
+            return element === arrB[index]
+        })
+    }
 }

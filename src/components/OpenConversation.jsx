@@ -45,8 +45,7 @@ const OpenConversation = () => {
             style={{ border: 'solid lightgray 2px', height: '95vh' }}>
             <div className='flex-grow-1'>
                 <div className='h-100 d-flex flex-column align-items-start justify-content-end'>
-
-                {/* map send messages & & sender */}
+                {/* map send messages & sender */}
                 {selectedConversation.messages.map((message, index) => {
                     const lastMessage = selectedConversation.messages.length - 1 === index
                     return (
@@ -68,22 +67,21 @@ const OpenConversation = () => {
                     )
                 })}
             </div>
-
         </div>
 
-            <Form onSubmit={handleSubmit} className='MessageForm' >
-                <Form.Group>
+            <Form onSubmit={handleSubmit}  >
+                <Form.Group className='MessageForm'>
                     <InputGroup className='TextBox'>
                         <Form.Control 
                             as='textarea' 
                             value={text}
                             onChange={e => setText(e.target.value)}
-                            style={{ height: '80px', resize: 'inherit' }}
+                            style={{ height: '50px', resize: 'inherit' }}
                             required />
 
                         <Button variant='outline-success' type='submit'>
-                            <ArrowCircleUpIcon />
                             Send
+                            <ArrowCircleUpIcon className='SendIcon' />
                         </Button>
                     </InputGroup>
                 </Form.Group>
