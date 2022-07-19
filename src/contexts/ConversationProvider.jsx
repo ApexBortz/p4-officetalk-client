@@ -78,7 +78,7 @@ export function ConversationProvider({ id, children }) {
     function sendMessage(recipients, text) {
 
         socket.emit('send-message', { recipients, text })
-        console.log(contactArrayMatch)
+        // console.log(contactArrayMatch)
         addMessage({ recipients, text, sender: id })
     }
 
@@ -122,17 +122,19 @@ export function ConversationProvider({ id, children }) {
     )
 }
 
-// contact array match for addmessage to ensure messages get sent to the right chats
+// contact array match for addmessage to ensure messages get sent to the right chat
 function contactArrayMatch(arrA, arrB) {
     if (arrA.length !== arrB.length) {
         return false
-    } else {
-        arrA.sort()
-        arrB.sort()
-
-        return arrA.every((element, index) => {
-            return element === arrB[index]
-        })
     }
+        arrA.sort(function(a, b) {return a - b})
+        arrB.sort(function(a, b) {return a - b})
+
+        for(let i = 0; i < arrA.length; i++) {
+            if (arrA[i] !== arrB[i]) {
+                return false
+            }
+        }
+    return true
 }
 
