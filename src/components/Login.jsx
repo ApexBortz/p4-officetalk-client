@@ -32,7 +32,7 @@ const Login = ({ onIdSubmit }) => {
                     <Form.Control type='text' ref={id}></Form.Control>
                 </Form.Group>
                 <Button type='submit' variant='outline-success' className='m-2'>Confirm</Button>
-                <Button onClick={createNewId} variant='outline-secondary'>Create New Id</Button>
+                <Button onClick={createNewId} variant='outline-secondary'>Create Random Id</Button>
             </Form>
         </Container>
 

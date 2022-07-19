@@ -24,9 +24,10 @@ const NewConversationModal = ({ closeModal }) => {
         closeModal()
     }
 
-    // check box change
+    // contact list & check box change 
     const handleCheckboxChange = (contactId) => {
         setSelectedContacts(prevSelectedContacts => {
+            // contact wont be available if alrdy selected
             if(prevSelectedContacts.includes(contactId)) {
                 return prevSelectedContacts.filter(prevId => {
                     return contactId !== prevId

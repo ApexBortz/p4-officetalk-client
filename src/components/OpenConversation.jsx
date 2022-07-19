@@ -1,7 +1,6 @@
 import React from 'react'
 import { Form, InputGroup, Button } from 'react-bootstrap'
 import { useState } from 'react'
-// import { useRef, useEffect } from 'react'
 import { useConversations } from '../contexts/ConversationProvider'
 import { useCallback } from 'react'
 import { ArrowCircleUpIcon } from '@heroicons/react/outline'
@@ -12,16 +11,15 @@ const OpenConversation = () => {
 
     // usestate for the text in message box
     const [ text, setText ] = useState('')
-    
-    // const lastMessageRef = useRef()
 
-    // usecallback to scroll down to last message when you send a message instead of when you start typing
+    // usecallback to scroll into view of newest message
     const setRef = useCallback(newestMessage => {
         if(newestMessage) {
             newestMessage.scrollIntoView()
         }
     }, [])
 
+    // extract sendmessage & selected convos
     const { sendMessage, selectedConversation } = useConversations()
 
     // handlesubmit function for sending messages
@@ -32,13 +30,6 @@ const OpenConversation = () => {
 
         setText('')
     }
-
-    // useffect to help keep the overflow down at bottom
-    // useEffect(() => {
-    //     if(lastMessageRef.current) {
-    //         lastMessageRef.current.scrollIntoView()
-    //     }
-    // })
 
     return (
         <div className='mx-2 d-flex flex-column flex-grow-1 rounded overflow-auto' 

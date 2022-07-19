@@ -10,6 +10,7 @@ import { useCallback } from 'react'
 
 const ConversationContext = React.createContext()
 
+
 export function useConversations() {
     return useContext(ConversationContext)
 }
@@ -77,7 +78,7 @@ export function ConversationProvider({ id, children }) {
     function sendMessage(recipients, text) {
 
         socket.emit('send-message', { recipients, text })
-
+        console.log(contactArrayMatch)
         addMessage({ recipients, text, sender: id })
     }
 
@@ -121,8 +122,8 @@ export function ConversationProvider({ id, children }) {
     )
 }
 
-// function to check contacts in array
-const contactArrayMatch = (arrA, arrB) => {
+// contact array match for addmessage to ensure messages get sent to the right chats
+function contactArrayMatch(arrA, arrB) {
     if (arrA.length !== arrB.length) {
         return false
     } else {
@@ -134,3 +135,4 @@ const contactArrayMatch = (arrA, arrB) => {
         })
     }
 }
+
