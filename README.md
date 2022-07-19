@@ -48,13 +48,13 @@ I wanted to use websockets for this project, since it came up in discussion duri
 # Wireframes
 
 ## On socket connection
-![](../wireframes/p4socketconnection.jpg)
+![]
 
 ## Connected Users
-![](../wireframes/connectedusers.jpg)
+![]
 
 ## Private Chat
-![](../wireframes/privatechat.jpg)
+![]
 
 ## Public Chat Channel
-![](../wireframes/publicchannel.jpg)
+![]

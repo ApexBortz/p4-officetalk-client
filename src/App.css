@@ -4,6 +4,7 @@
 }
 
 .MainLogo {
+  text-align: center;
   background-color: aliceblue;
   padding: 15px;
   border-radius: 10px;
@@ -22,6 +23,7 @@
 }
 
 .LoginScreen {
+  text-align: center;
   border: solid lightgrey 2px;
   border-radius: 20px;
   margin-left: 3vw;
