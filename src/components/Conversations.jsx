@@ -2,6 +2,8 @@ import React from 'react'
 import { ListGroup } from 'react-bootstrap'
 import { useConversations } from '../contexts/ConversationProvider'
 import { ChatAltIcon } from '@heroicons/react/outline'
+import { TrashIcon } from '@heroicons/react/outline'
+import { Button } from 'react-bootstrap'
 
 // conversations component for list of conversations
 const Conversations = () => {
@@ -20,10 +22,17 @@ const Conversations = () => {
                     onClick={() => selectConversationIndex(index)}
                     active={conversation.selected}
                     className='ConversationList'
-                    variant='primary' >
+                    variant='primary'>
 
                     { conversation.recipients.map(recipient => recipient.name).join(', ') }
                     <ChatAltIcon className='ChatIcon' />
+                    <Button 
+                        className='CloseConvoButton' 
+                        variant='outline-danger'
+                        // onClick={() => deleteConversation(index)}
+                         >
+                        <TrashIcon className='DeleteButton'/>
+                    </Button>
                 </ListGroup.Item>
             ))}
         </ListGroup>

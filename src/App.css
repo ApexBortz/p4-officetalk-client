@@ -48,6 +48,15 @@
   margin-top: 15px;
 }
 
+.CloseConvoButton {
+  margin-left: 30px;
+}
+
+.DeleteButton {
+  height: 20px;
+  margin-bottom: 3px;
+}
+
 .SendIcon {
   height: 30px;
   margin-bottom: 3px;

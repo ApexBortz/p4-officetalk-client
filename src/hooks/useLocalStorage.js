@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
+import { useState } from 'react'
 
 // key id prefix
 const PREFIX = 'OfficeTalk'
 
-// local storage to keep you 'signed in' even if you refresh page
+// local storage to save contacts & conversations
 const useLocalStorage = (key, initialValue) => {
 
     const prefixKey = PREFIX + key
