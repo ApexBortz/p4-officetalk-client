@@ -15,16 +15,16 @@ export function useConversations() {
     return useContext(ConversationContext)
 }
 
-// context provider for making new conversation and showing list of convos
+// context provider for creating new convos & showing list of convos
 export function ConversationProvider({ id, children }) {
 
-    // our convos from localstorage
+    // extract convos from localstorage
     const [ conversations, setConversations ] = useLocalStorage('conversations', [])
 
-    // useState for selected conversation & for selecting a different one
+    // useState for selected conversation & for selecting different one
     const [ selectedConversationIndex, setSelectedConversationIndex ] = useState(0)
 
-    // extracting contacts from context provider
+    // extract contacts from context provider
     const { contacts } = useContacts()
 
     // socket import

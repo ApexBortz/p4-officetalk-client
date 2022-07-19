@@ -4,12 +4,23 @@ import { useConversations } from '../contexts/ConversationProvider'
 import { ChatAltIcon } from '@heroicons/react/outline'
 import { TrashIcon } from '@heroicons/react/outline'
 import { Button } from 'react-bootstrap'
+// import useLocalStorage from '../hooks/useLocalStorage'
 
 // conversations component for list of conversations
 const Conversations = () => {
 
     // extract conversations from conversationprovider
     const { conversations, selectConversationIndex } = useConversations()
+
+    // const [ convoToDelete ] = useLocalStorage('conversations', selectConversationIndex)
+
+    const deleteConversation = () => {
+        // isolate the conversation to delete
+        // i = selectConversationIndex
+        console.log(selectConversationIndex)
+        // conversations.splice(1, conversations.active)
+        console.log(conversations)
+    }
 
     return (
         
@@ -29,7 +40,7 @@ const Conversations = () => {
                     <Button 
                         className='CloseConvoButton' 
                         variant='outline-danger'
-                        // onClick={() => deleteConversation(index)}
+                        onClick={deleteConversation}
                          >
                         <TrashIcon className='DeleteButton'/>
                     </Button>
