@@ -11,10 +11,10 @@ export function useContacts() {
 // context provider for making new contact and list of contacts
 export function ContactProvider({ children }) {
 
-    // our list of contacts from local storage
+    // list of contacts from local storage
     const [ contacts, setContacts ] = useLocalStorage('contacts', [])
 
-    // creating new contact
+    // create new contact function
     function createContact(id, name) {
         setContacts(prevContacts => {
             return [ ...prevContacts, { id, name }]
