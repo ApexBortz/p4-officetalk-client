@@ -34,7 +34,7 @@ const Conversations = () => {
                     active={conversation.selected}
                     className='ConversationList'
                     variant='primary'>
-
+                    
                     { conversation.recipients.map(recipient => recipient.name).join(', ') }
                     <ChatAltIcon className='ChatIcon' />
                     <Button 
