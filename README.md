@@ -48,16 +48,16 @@ I wanted to use websockets for this project, since it came up in discussion duri
 # Wireframes
 
 ## On socket connection
-<img src='./wireframes/p4socketconnection.jpg' width='200'/>
+<img src='./wireframes/p4socketconnection.jpg' width='350'/>
 
 ## Dashboard / Contacts
-![Dashboard](./wireframes/dashboard.jpg)
+<img src='./wireframes/dashboard.jpg' width='350' />
 
 ## Private Chat
-![PrivateChat](./wireframes/privatechat.jpg)
+<img src='./wireframes/privatechat.jpg' width='350' />
 
 ## Public Chat Channel
-![PublicChat](./wireframes/publicchannel.jpg)
+<img src='./wireframes/publicchannel.jpg' width='350' />
 
 # Installation
 * Clone this Client repo
