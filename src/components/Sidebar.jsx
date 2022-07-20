@@ -6,6 +6,7 @@ import { UserGroupIcon } from '@heroicons/react/outline'
 import { UserAddIcon } from '@heroicons/react/outline'
 import { IdentificationIcon } from '@heroicons/react/outline'
 import { InboxInIcon } from '@heroicons/react/outline'
+import { LogoutIcon } from '@heroicons/react/outline'
 import Contacts from './Contacts'
 import Conversations from './Conversations'
 import NewContactModal from './NewContactModal'
@@ -79,14 +80,16 @@ const Sidebar = ({ id }) => {
                 Your Id: <span className='text-muted'>{id}</span>
             </div>
 
-            <Button onClick={() => setModalOpen(true)} variant='outline-success'>
+            <Button onClick={() => setModalOpen(true)} variant='outline-success'
+                    className='ContactConversationButton'>
                 New { openConversation ? 'Conversation' : 'Contact'}
                 { openConversation ? <ChatAlt2Icon className='ChatIcon' /> : <UserAddIcon className='UserAdd'/>}
             </Button>
 
-            <Button className='LogoutButton' 
-                    variant='outline-danger'
-                    onClick={LogOut}>Log Out</Button>
+            <Button className='LogoutButton' variant='outline-danger'
+                    onClick={LogOut}>Log Out
+                    <LogoutIcon className='LogoutIcon'/> 
+                </Button>
 
         </div>
     )

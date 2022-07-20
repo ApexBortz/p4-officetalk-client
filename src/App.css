@@ -145,6 +145,10 @@
   display: flexbox;
 }
 
+.ContactConversationButton {
+  margin: 3px;
+}
+
 .YourId {
   display: flex;
   flex-flow: column;
@@ -159,7 +163,13 @@
 }
 
 .LogoutButton {
-  margin-top: 5px;
+  margin: 3px;
+}
+
+.LogoutIcon {
+  height: 20px;
+  margin-left: 10px;
+  margin-bottom: 3px;
 }
 
 .App-header {
