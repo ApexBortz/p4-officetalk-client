@@ -32,7 +32,7 @@ const Sidebar = ({ id }) => {
         localStorage.clear()
         window.location.reload()
     }
-
+    
     // close modal function that gets passed into both modals
     const closeModal = () => {
         setModalOpen(false)
