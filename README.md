@@ -29,7 +29,8 @@ I wanted to use websockets for this project, since it came up in discussion duri
 * Youtube tutorials, and google.
 
 ## Goal with this Project:
-* Explore and implement the various uses and conveniences of real-time messaging by using Websockets
+* Explore and implement the uses and conveniences of real-time messaging by using Websockets
+* Explore and learn react further in depth since i really enjoy it, and am considering applying to some react dev positions after this course.
 
 ## Users for this App:
 * Anyone in an office work environment where continued and real-time communication is crucial to project success.
