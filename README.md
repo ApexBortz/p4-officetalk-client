@@ -58,3 +58,9 @@ I wanted to use websockets for this project, since it came up in discussion duri
 
 ## Public Chat Channel
 ![PublicChat](./wireframes/publicchannel.jpg)
+
+# Installation
+* Clone this Client repo
+* Clone Server repo: https://github.com/ApexBortz/p4-officetalk-server
+* Install dependencies
+* You're good to go!
