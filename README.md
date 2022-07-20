@@ -48,7 +48,7 @@ I wanted to use websockets for this project, since it came up in discussion duri
 # Wireframes
 
 ## On socket connection
-![Login](./wireframes/p4socketconnection.jpg)
+<img src='./wireframes/p4socketconnection.jpg' width='200'/>
 
 ## Dashboard / Contacts
 ![Dashboard](./wireframes/dashboard.jpg)
