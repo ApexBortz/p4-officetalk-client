@@ -10,6 +10,7 @@ import Contacts from './Contacts'
 import Conversations from './Conversations'
 import NewContactModal from './NewContactModal'
 import NewConversationModal from './NewConversationModal'
+// import Login from './Login'
 
 const conversations_key = 'conversations'
 const contacts_key = 'contacts'
@@ -24,6 +25,12 @@ const Sidebar = ({ id }) => {
 
     // activekey for switching active tabs
     const openConversation = activeKey === conversations_key
+
+    // log out function clears local storage & reloads login
+    const LogOut = () => {
+        localStorage.clear()
+        window.location.reload()
+    }
 
     // close modal function that gets passed into both modals
     const closeModal = () => {
@@ -76,6 +83,10 @@ const Sidebar = ({ id }) => {
                 New { openConversation ? 'Conversation' : 'Contact'}
                 { openConversation ? <ChatAlt2Icon className='ChatIcon' /> : <UserAddIcon className='UserAdd'/>}
             </Button>
+
+            <Button className='LogoutButton' 
+                    variant='outline-danger'
+                    onClick={LogOut}>Log Out</Button>
 
         </div>
     )

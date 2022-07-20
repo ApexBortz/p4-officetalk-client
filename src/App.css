@@ -158,6 +158,10 @@
   margin-top: 30vmin;
 }
 
+.LogoutButton {
+  margin-top: 5px;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
