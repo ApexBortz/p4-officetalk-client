@@ -14,7 +14,7 @@ const Login = ({ onIdSubmit }) => {
         onIdSubmit(id.current.value)
     }
 
-    // create id function using v4 function from the uuid library to generate a random id
+    // create id function using v4 function from the uuid library to generate random id
     const createNewId = () => {
         onIdSubmit(v4())
     }
