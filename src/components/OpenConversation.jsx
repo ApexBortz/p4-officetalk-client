@@ -19,7 +19,7 @@ const OpenConversation = () => {
         }
     }, [])
 
-    // extract sendmessage & selected convos
+    // extract sendmessage & selected convos from context
     const { sendMessage, selectedConversation } = useConversations()
 
     // handlesubmit function for sending messages
