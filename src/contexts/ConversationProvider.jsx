@@ -106,7 +106,7 @@ export function ConversationProvider({ id, children }) {
         return { ...conversation, messages, recipients, selected }
     })
 
-    // wrapping everything to pass into the return in here cuz its alot
+    // wrapping everything to pass into context provider in here cuz its alot
     const providerValue = {
         conversations: formattedConvos,
         selectedConversation : formattedConvos[selectedConversationIndex],
