@@ -18,7 +18,7 @@ export function SocketConnection({ id, children }) {
 
     // create socket when new page loads or if there is an id change
     useEffect(() => {
-        const newSocket = io('http://localhost:7000', { query: {id} })
+        const newSocket = io('https://office-talk.herokuapp.com/', { query: {id} })
 
         setSocket(newSocket)
 
